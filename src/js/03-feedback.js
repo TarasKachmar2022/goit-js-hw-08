@@ -12,9 +12,9 @@ savedMessage()
 
 function onFormSubmit(event){
     event.preventDefault();
-
-    console.log(formData);
     
+    console.log(formData);
+
     localStorage.removeItem(STORAGE_KEY);
     event.currentTarget.reset();
     
@@ -30,13 +30,13 @@ function onInputChange(event){
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
-function savedMessage(event){
+function savedMessage(){
     const savedMessage = localStorage.getItem(STORAGE_KEY);
     const parseSavedMessage = JSON.parse(savedMessage);
 
     if(parseSavedMessage){
         const keys = Object.keys(parseSavedMessage);
-        keys.forEach(key => {formRef.elements[key].value = parseSavedMessage[key]
+        keys.forEach(key => {formRef.elements[key].value = parseSavedMessage[key];
         });
     }
 

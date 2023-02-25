@@ -12,5 +12,5 @@ function localStorageSaveTime(currentTime) {
 
 const savedTime = localStorage.getItem("videoplayer-current-time");
 const parseSavedTime = JSON.parse(savedTime);
-seconds = parseSavedTime.seconds;
+const seconds = parseSavedTime.seconds;
 player.setCurrentTime(seconds);
