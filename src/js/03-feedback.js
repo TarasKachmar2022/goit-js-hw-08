@@ -5,10 +5,12 @@ formRef.addEventListener('submit', onFormSubmit);
 
 const STORAGE_KEY = "feedback-form-state";
 savedMessage()
+const email ='';
+const message ='';
 
 function onInputChange(){
-    let email = formRef.elements.email.value;
-    let message = formRef.elements.message.value;
+    email = formRef.elements.email.value;
+    message = formRef.elements.message.value;
     // console.log(email)
     // console.log(message)
     const formData = {email, message};
