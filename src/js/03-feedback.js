@@ -7,8 +7,8 @@ const STORAGE_KEY = "feedback-form-state";
 savedMessage()
 
 function onInputChange(){
-    email = formRef.elements.email.value;
-    message = formRef.elements.message.value;
+    let email = formRef.elements.email.value;
+    let message = formRef.elements.message.value;
     // console.log(email)
     // console.log(message)
     const formData = {email, message};
